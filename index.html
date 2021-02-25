@@ -9,14 +9,23 @@
     <title>Ohmyfood</title>
   </head>
   <body class="page">
-    <img class="Page__logo" src="images/ohmyfood.png" alt="logo" />
     <header class="headerPage">
+      <div class="headerPage__logo">
+        <img
+          class="headerPage__logo__1"
+          src="/images/ohmyfood.png"
+          alt="logo"
+        />
+      </div>
+
       <article class="descriptor">
         <div class="descriptor__location">
           <i class="fas fa-map-marker-alt"></i>Paris,Belleville
         </div>
         <div class="descriptor__reserve">
-          Réservez le menu qui vous convient
+          <h2 class="descriptor__reserve__titre">
+            Réservez le menu qui vous convient
+          </h2>
         </div>
         <h3 class="descriptor__discovering">
           Découvrez des réstaurants d'exception,sélectionnés par nos soins.
@@ -26,99 +35,114 @@
       <nav class="menuNav">
         <h1 class="menuNav__name">Fonctionnement</h1>
         <div class="menuNav__link menuNav__link--choose">
+          <span class="menuNav__link__circle">1</span>
           <i class="fas fa-mobile-alt"></i
           ><a href="">Choisissez un restaurant</a>
         </div>
         <div class="menuNav__link menuNav__link--compose">
+          <span class="menuNav__link__circle">2</span>
           <i class="fas fa-bars"></i><a href="">Composer votre menu</a>
         </div>
         <div class="menuNav__link menuNav__link--tast">
+          <span class="menuNav__link__circle">3</span>
           <i class="fas fa-store"></i><a href="">Dégustez au restaurant </a>
         </div>
       </nav>
     </header>
 
     <main>
+      <h1 class="group-card__name">Restaurants</h1>
       <section class="group-card">
-        <h1 class="group-card__name">Restaurants</h1>
-
-        <figure
-          class="card"
-          onclick="location.href='Menus/la palette du gout.html';"
-        >
-          <!-- <div class="card__picture1"></div> -->
-          <img
-            class="card__picture"
-            src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt="jay-wennington"
-          />
-
-          <figcaption class="card__name">
-            <div class="card__name--description">
-              <h2 class="card__name__savor">La palette du goût</h2>
-              <p class="card__name__town">Ménilmontant</p>
-            </div>
-            <i class="far fa-heart"></i>
-            <div class="card__name__nouveau">
+        <section class="group-card__1">
+          <figure
+            class="card"
+            onclick="location.href='Menus/la palette du gout.html';"
+          >
+            <!-- <div class="card__picture1"></div> -->
+            <div class="group__picture">
+              <img
+                class="card__picture"
+                src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="jay-wennington"
+              />
               <h5 class="card__name__nouveau__h">Nouveau</h5>
             </div>
-          </figcaption>
-        </figure>
 
-        <figure
-          class="card"
-          onclick="location.href='Menus/la note enchanté.html';"
-        >
-          <img
-            class="card__picture"
-            src="images/stil-u2Lp8tXIcjw-unsplash.jpg"
-            alt=""
-          />
-          <figcaption class="card__name">
-            <div class="card__name--description">
-              <h2 class="card__name__savor">La note enchantée</h2>
-              <p class="card__name__town">Charonne</p>
-            </div>
-            <i class="far fa-heart"></i>
-          </figcaption>
-        </figure>
+            <figcaption class="card__name">
+              <div class="card__name--description__palette">
+                <h2 class="card__name__savor">La palette du goût</h2>
+                <p class="card__name__town">Ménilmontant</p>
+              </div>
+              <i class="far fa-heart"></i>
+            </figcaption>
+          </figure>
 
-        <figure
-          class="card"
-          onclick="location.href='Menus/A la francaise.html';"
-        >
-          <img
-            class="card__picture"
-            src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-            alt=""
-          />
-          <figcaption class="card__name">
-            <div class="card__name--description">
-              <h2 class="card__name__savor">A la française</h2>
-              <p class="card__name__town">Cité Rouge</p>
-            </div>
-            <i class="far fa-heart"></i>
-          </figcaption>
-        </figure>
-
-        <figure
-          class="card"
-          onclick="location.href='Menus/Le delice des sens.html';"
-        >
-          <img
-            class="card__picture"
-            src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-            alt=""
-          />
-          <figcaption class="card__name">
-            <div class="card__name--description">
-              <h2 class="card__name__savor">Le délice des sens</h2>
-              <p class="card__name__town">Folie-Méricourt</p>
+          <figure
+            class="card"
+            onclick="location.href='Menus/la note enchanté.html';"
+          >
+            <div class="group__picture">
+              <img
+                class="card__picture"
+                src="images/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="jay-wennington"
+              />
+              <h5 class="card__name__nouveau__h">Nouveau</h5>
             </div>
 
-            <i class="far fa-heart"></i>
-          </figcaption>
-        </figure>
+            <figcaption class="card__name">
+              <div class="card__name--description__enchanté">
+                <h2 class="card__name__savor">La note enchantée</h2>
+                <p class="card__name__town">Charonne</p>
+              </div>
+              <i class="far fa-heart"></i>
+            </figcaption>
+          </figure>
+        </section>
+        <section class="group-card__2">
+          <figure
+            class="card"
+            onclick="location.href='Menus/A la francaise.html';"
+          >
+            <div class="group__picture">
+              <img
+                class="card__picture"
+                src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="jay-wennington"
+              />
+            </div>
+
+            <figcaption class="card__name">
+              <div class="card__name--description__francaise">
+                <h2 class="card__name__savor">A la française</h2>
+                <p class="card__name__town">Cité Rouge</p>
+              </div>
+              <i class="far fa-heart"></i>
+            </figcaption>
+          </figure>
+
+          <figure
+            class="card"
+            onclick="location.href='Menus/Le delice des sens.html';"
+          >
+            <div class="group__picture">
+              <img
+                class="card__picture"
+                src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="jay-wennington"
+              />
+            </div>
+
+            <figcaption class="card__name">
+              <div class="card__name--description">
+                <h2 class="card__name__savor">Le délice des sens</h2>
+                <p class="card__name__town">Folie-Méricourt</p>
+              </div>
+
+              <i class="far fa-heart"></i>
+            </figcaption>
+          </figure>
+        </section>
       </section>
     </main>
 
@@ -126,13 +150,13 @@
       <h2 class="footerPage__logo">ohmyfood</h2>
       <div class="footerPage__utensils">
         <i class="fas fa-utensils"></i>
-        <p>Proposer un restaurant</p>
+        <p class="footerPage__utensils__proposer">Proposer un restaurant</p>
       </div>
       <div class="footerPage__handshake">
         <i class="fas fa-handshake"></i>
-        <p>Devenir partenaire</p>
+        <p class="footerPage__handshake__partenaire">Devenir partenaire</p>
       </div>
-      <h2>Mentions légales</h2>
+      <h2 class="footerPage__handshake__legal">Mentions légales</h2>
       <a class="footerPage__link" href="#"> Contact</a>
     </footer>
   </body>
