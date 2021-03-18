@@ -381,6 +381,7 @@ $breakpoints: (
 
   &__search {
     // width: 56%;
+    font-size: 1.3em;
     height: 41px;
     color: white;
     @include radius;
@@ -400,12 +401,15 @@ $breakpoints: (
     @include tablet-L {
       // width: 30%;
     }
+
     @include labtop {
       position: absolute;
-      left: 180px;
-      top: 124px;
-      width: 22%;
+      left: 157px;
+      top: 130px;
+      width: 24%;
+      height: 30px;
       font-size: 1.2em;
+      border-left: 1px solid black;
       border: none;
       background: none;
       color: black;
@@ -422,15 +426,20 @@ $breakpoints: (
       -o-border-radius: 0;
     }
     @include labtop-L {
-      left: 257px;
-      height: 37px;
+      left: 275px;
+      // height: 30px;
+      border-left: 1px solid black;
       top: 128px;
-      border: none;
+      // font-size: 1.2em;
+      // border: none;
       border-radius: transparent;
       -webkit-border-radius: transparent;
       -moz-border-radius: transparent;
       -ms-border-radius: transparent;
       -o-border-radius: transparent;
+    }
+    @include labtop-4K {
+      left: 475px;
     }
   }
   // & i {
@@ -696,6 +705,7 @@ footer {
 
     i {
       cursor: pointer;
+      position: relative;
     }
     &__logo {
       width: 50%;
@@ -745,17 +755,51 @@ footer {
     z-index: -10;
   }
 }
+// =================Animation group section section ===========
 .group__pageMenu__section__entrées {
   @include groupSection;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  animation: opacity 3s ease-in-out 1;
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 .group__pageMenu__section__plats {
   @include groupSection;
+  animation: opacity 4s ease-in-out 1;
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 .group__pageMenu__section__desserts {
   @include groupSection;
+  animation: opacity 5s ease-in-out 1;
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
 .pageMenu {
   display: flex;
@@ -776,25 +820,43 @@ footer {
   }
 
   &__name {
-    display: flex;
+    position: relative;
     // justify-content: space-between;
     &__description {
-      width: 90%;
+      position: relative;
+      width: 100%;
       text-align: center;
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: 900;
+      bottom: -11px;
+      @include mobile-L {
+        font-size: 2em;
+        bottom: 0px;
+      }
+      @include labtop {
+        font-size: 2.3em;
+        bottom: 8px;
+      }
     }
     // &__heart {
     //   width: 20px;
     //   fill: green;
     // }
     & i {
-      display: flex;
+      position: absolute;
+      right: 0px;
+      top: 32px;
+      // display: flex;
       // justify-content: center;
       align-items: center;
       // border: 1px solid black;
       width: 20%;
-      font-size: 2em;
+      font-size: 1.3em;
+      @include mobile-L {
+        font-size: 2em;
+        top: 28px;
+      }
+
       &:hover {
         color: $color-primary;
         font-weight: 600;
@@ -888,24 +950,20 @@ footer {
         flex-direction: column;
         justify-content: space-evenly;
         margin-left: 10px;
-        width: 292px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+        width: 70%;
         &__plate {
           font-size: 1em;
           margin: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
         }
 
         &__p {
-          display: flex;
-          flex-direction: column;
-
           margin: 0;
-
-          // align-items: start;
-          // justify-content: space-between;
-          // border: 1px solid black;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
         }
       }
 
@@ -1004,7 +1062,7 @@ footer {
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      width: 50%;
+      width: 30%;
       height: 100%;
       align-items: center;
       justify-content: center;
@@ -1017,18 +1075,19 @@ footer {
         box-shadow: 4px 8px 18px darken(grey, 20);
         background-color: lighten($color-secondary, 5);
       }
-    }
-    @include tablet {
-      width: 35%;
-    }
-    @include labtop {
-      width: 35%;
-    }
-    @include labtop-L {
-      width: 35%;
-    }
-    @include labtop-4K {
-      width: 35%;
+
+      @include tablet {
+        width: 30%;
+      }
+      @include labtop {
+        width: 30%;
+      }
+      @include labtop-L {
+        width: 30%;
+      }
+      @include labtop-4K {
+        width: 30%;
+      }
     }
   }
 }
