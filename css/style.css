@@ -670,10 +670,6 @@ footer {
   font-size: 2em;
   font-weight: 900;
 }
-.pageMenu__name__heart {
-  width: 20px;
-  fill: green;
-}
 .pageMenu__name i {
   display: flex;
   align-items: center;
