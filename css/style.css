@@ -294,8 +294,8 @@
 @media screen and (min-width: 1024px) {
   .descriptor__search {
     position: absolute;
-    left: 157px;
-    top: 130px;
+    left: 17%;
+    top: 50%;
     width: 24%;
     height: 30px;
     font-size: 1.2em;
@@ -318,19 +318,12 @@
 }
 @media screen and (min-width: 1440px) {
   .descriptor__search {
-    left: 275px;
     border-left: 1px solid black;
-    top: 128px;
     border-radius: transparent;
     -webkit-border-radius: transparent;
     -moz-border-radius: transparent;
     -ms-border-radius: transparent;
     -o-border-radius: transparent;
-  }
-}
-@media screen and (min-width: 2560px) {
-  .descriptor__search {
-    left: 475px;
   }
 }
 
@@ -411,33 +404,42 @@
   padding: 0px 20px;
   font-size: 1em;
 }
-.card__name i {
+.card__name__group__i {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.card__name__group__i i {
   font-size: 2em;
   color: #2e2e2e;
-  background-color: white;
-  border-radius: 50%;
-  padding: 0.2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
-.card__name i::before {
-  content: "";
-  font-weight: 100;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 16s ease-in-out;
-  -webkit-transition: transform 16s ease-in-out;
-  -moz-transition: transform 16s ease-in-out;
-  -ms-transition: transform 16s ease-in-out;
-  -o-transition: transform 16s ease-in-out;
-}
-.card__name i:hover::before {
+.card__name__group__i #i {
+  position: absolute;
+  font-size: 0em;
   color: #b060db;
   font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: font-size 1s ease-in-out;
+  -webkit-transition: font-size 1s ease-in-out;
+  -moz-transition: font-size 1s ease-in-out;
+  -ms-transition: font-size 1s ease-in-out;
+  -o-transition: font-size 1s ease-in-out;
+}
+.card__name__group__i i:hover + #i {
   cursor: pointer;
-  transform: scaleY(1);
-  -webkit-transform: scaleY(1);
-  -moz-transform: scaleY(1);
-  -ms-transform: scaleY(1);
-  -o-transform: scaleY(1);
+  font-weight: bold;
+  font-size: 1.8em;
 }
 .card__name__nouveau__h {
   position: absolute;
@@ -545,63 +547,103 @@ footer {
 .headerPage__menu {
   display: flex;
   justify-content: center;
-}
-.headerPage__menu__div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: space-evenly;
-  width: 80%;
-}
-.headerPage__menu__div i {
-  cursor: pointer;
-  position: relative;
-}
-.headerPage__menu__div__logo {
-  width: 50%;
-  position: relative;
-  left: -70px;
-  margin-bottom: 10px;
+  height: 50px;
 }
 @media screen and (min-width: 425px) {
-  .headerPage__menu__div__logo {
-    left: -34px;
-    margin-bottom: auto;
+  .headerPage__menu {
+    height: 70px;
   }
 }
-@media screen and (min-width: 375px) {
-  .headerPage__menu__div__logo {
-    left: -34px;
-    margin-bottom: auto;
-  }
-}
-@media screen and (min-width: 320px) {
-  .headerPage__menu__div__logo {
-    left: -27px;
-    margin-bottom: auto;
+@media screen and (min-width: 625px) {
+  .headerPage__menu {
+    height: 90px;
   }
 }
 @media screen and (min-width: 768px) {
-  .headerPage__menu__div__logo {
-    left: -54px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .headerPage__menu__div__logo {
-    left: -77px;
+  .headerPage__menu {
+    height: 102px;
   }
 }
 @media screen and (min-width: 1440px) {
-  .headerPage__menu__div__logo {
-    left: -106px;
+  .headerPage__menu {
+    height: 170px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .headerPage__menu {
+    height: 190px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .headerPage__menu {
+    height: 225px;
   }
 }
 @media screen and (min-width: 2560px) {
-  .headerPage__menu__div__logo {
-    left: -180px;
+  .headerPage__menu {
+    height: 260px;
   }
 }
-
+.headerPage__menu__div {
+  width: 80%;
+  position: relative;
+  height: 100%;
+}
+.headerPage__menu__div i {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8em;
+}
+@media screen and (min-width: 375px) {
+  .headerPage__menu__div i {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 425px) {
+  .headerPage__menu__div i {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 625px) {
+  .headerPage__menu__div i {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .headerPage__menu__div i {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .headerPage__menu__div i {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .headerPage__menu__div i {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .headerPage__menu__div i {
+    font-size: 4em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .headerPage__menu__div i {
+    font-size: 5em;
+  }
+}
+.headerPage__menu__div__logo {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .poster {
   width: 100%;
   height: 247px;
@@ -704,6 +746,8 @@ footer {
 }
 .pageMenu__name {
   position: relative;
+  width: 100%;
+  height: 99px;
 }
 .pageMenu__name__description {
   position: relative;
@@ -725,23 +769,44 @@ footer {
     bottom: 8px;
   }
 }
-.pageMenu__name i {
+.pageMenu__name__group__i {
   position: absolute;
-  right: 0px;
-  top: 32px;
-  align-items: center;
-  width: 20%;
-  font-size: 1.3em;
+  width: 30px;
+  height: 30px;
+  left: 78%;
+  top: 26%;
 }
-@media screen and (min-width: 425px) {
-  .pageMenu__name i {
-    font-size: 2em;
-    top: 28px;
-  }
+.pageMenu__name__group__i i {
+  font-size: 2em;
+  color: #2e2e2e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
-.pageMenu__name i:hover {
-  color: #9356dc;
-  font-weight: 600;
+.pageMenu__name__group__i #i {
+  position: absolute;
+  font-size: 0em;
+  color: #b060db;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: font-size 1s ease-in-out;
+  -webkit-transition: font-size 1s ease-in-out;
+  -moz-transition: font-size 1s ease-in-out;
+  -ms-transition: font-size 1s ease-in-out;
+  -o-transition: font-size 1s ease-in-out;
+}
+.pageMenu__name__group__i i:hover + #i {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 .pageMenu__section {
   display: flex;
