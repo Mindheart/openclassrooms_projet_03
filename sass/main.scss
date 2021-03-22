@@ -2,7 +2,26 @@
 @import "../Utils/Mixins/mixins.scss";
 @import "../Utils/colors/colors.scss";
 
+// @mixin roboto {
+//   @font-face {
+//     font-family: "Roboto";
+//     src: url(/fonts/Roboto/Roboto-Regular.ttf);
+//   }
+// }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("font-face/Roboto/Roboto-Regular.ttf"),
+    url(/font-face/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url(/fonts/Shrikhand/Shrikhand-Regular.ttf);
+}
+
 $breakpoints: (
+  mobile: 200px,
   mobile-S: 320px,
   mobile-M: 375px,
   mobile-L: 425px,
@@ -21,6 +40,11 @@ $breakpoints: (
   align-items: center;
   width: 100%;
   height: auto;
+}
+@mixin mobile {
+  @media screen and(min-width:map-get($breakpoints,mobile)) {
+    @content;
+  }
 }
 @mixin mobile-S {
   @media screen and (min-width: map-get($breakpoints,mobile-S)) {
@@ -88,6 +112,29 @@ $breakpoints: (
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+}
+p,
+h2,
+h3,
+h4,
+a,
+.description__search {
+  font-family: "Roboto";
+  @include mobile {
+    font-size: 0.8em;
+  }
+  @include mobile-XL {
+    font-size: 1em;
+  }
+  @include labtop-L {
+    font-size: 1.4em;
+  }
+  @include labtop-4K {
+    font-size: 1.6em;
+  }
+}
+h1 {
+  font-family: "Shrikhand";
 }
 // body {
 //   margin: 0px;
@@ -200,7 +247,6 @@ $breakpoints: (
     align-items: center;
     justify-content: center;
     height: 90px;
-    font-size: 1em;
     order: -1;
     @include labtop {
       // position: absolute;
@@ -255,7 +301,7 @@ $breakpoints: (
     background-color: #f6f6f6;
     width: 100%;
     height: 75px;
-    font-size: 1.4em;
+    // font-size: 1.4em;
     justify-content: space-evenly;
     cursor: pointer;
     @include radius;
@@ -274,7 +320,7 @@ $breakpoints: (
       align-items: center;
       text-align: center;
       @include labtop {
-        font-size: 0.9em;
+        // font-size: 0.9em;
         border: none;
 
         & :hover {
@@ -283,24 +329,38 @@ $breakpoints: (
       }
       & {
         color: black;
+        position: relative;
+        transform: translateX(-6%);
+        -webkit-transform: translateX(-6%);
+        -moz-transform: translateX(-6%);
+        -ms-transform: translateX(-6%);
+        -o-transform: translateX(-6%);
       }
     }
     &__circle {
-      // display: flex;
-      // justify-content: center;
+      //display: flex;
+      //justify-content: center;
       position: relative;
       right: 13px;
       text-align: center;
       color: white;
       background-color: #9356dc;
-
+      height: 30px;
       width: 30px;
       border: 1px solid black;
-      border-radius: 30px;
-      -webkit-border-radius: 30px;
-      -moz-border-radius: 30px;
-      -ms-border-radius: 30px;
-      -o-border-radius: 30px;
+      border-radius: 50%;
+
+      &__p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        margin: 0;
+      }
     }
     @include labtop {
       width: 20%;
@@ -357,11 +417,13 @@ $breakpoints: (
     align-items: center;
     width: 100%;
     height: 80px;
-    font-size: 1.5em;
+    // font-size: 1.5em;
     background-color: #eaeaea;
     @include center;
     // padding-bottom: 20px;
     & i {
+      position: absolute;
+      left: 32%;
       margin-right: 40px;
       color: black;
     }
@@ -372,7 +434,7 @@ $breakpoints: (
     width: 100%;
 
     &__titre {
-      font-size: 1.5em;
+      // font-size: 1.5em;
       font-weight: 900;
       width: 80%;
       @include center;
@@ -386,7 +448,7 @@ $breakpoints: (
     flex-direction: column;
     // border: 1px solid red;
     width: 76%;
-    font-size: 0.7em;
+    // font-size: 0.7em;
     // text-align: justify;
     // word-break: break-word;
     overflow-wrap: break-word;
@@ -399,7 +461,7 @@ $breakpoints: (
 
   &__search {
     // width: 56%;
-    font-size: 1.3em;
+    // font-size: 1.3em;
     height: 41px;
     color: white;
     @include radius;
@@ -426,7 +488,7 @@ $breakpoints: (
       top: 50%;
       width: 24%;
       height: 30px;
-      font-size: 1.2em;
+      // font-size: 1.2em;
       border-left: 1px solid black;
       border: none;
       background: none;
@@ -512,7 +574,7 @@ $breakpoints: (
   }
 
   &__name {
-    font-size: 2em;
+    // font-size: 2em;
     text-align: center;
   }
 }
@@ -547,12 +609,26 @@ $breakpoints: (
     margin: 0;
     padding: 0;
     padding: 0px 20px;
-    font-size: 1em;
+    // font-size: 1em;
     // border: 1px solid black;
     &__group__i {
       position: relative;
       width: 30px;
       height: 30px;
+      @include mobile {
+        font-size: 0.5em;
+      }
+      @include mobile-M {
+        font-size: 0.6em;
+      }
+
+      @include mobile-L {
+        font-size: 0.8em;
+      }
+      @include mobile-XL {
+        font-size: 1em;
+      }
+
       & i {
         font-size: 2em;
         color: #2e2e2e;
@@ -606,12 +682,12 @@ $breakpoints: (
     display: flex;
     flex-direction: column;
     width: 100%;
-    &__palette {
-      width: 100%;
-    }
-    &__francaise {
-      width: 2000%;
-    }
+    // &__palette {
+    //   width: 100%;
+    // }
+    // &__francaise {
+    //   width: 2000%;
+    // }
   }
   &__name__town {
     @include margin0;
@@ -631,24 +707,28 @@ $breakpoints: (
     height: 500px;
   }
 }
-.card__name__heart {
-  border: 1px solid red;
-  position: relative;
-  right: -23%;
-  &i {
-    position: absolute;
-  }
-}
+// .card__name__heart {
+//   border: 1px solid red;
+//   position: relative;
+//   right: -23%;
+//   &i {
+//     position: absolute;
+//   }
+// }
 footer {
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   display: flex;
   background-color: #353535;
+  padding-left: 20px;
+  @include mobile-XL {
+    justify-content: center;
+  }
 }
 .footerPage {
   background-color: #353535;
   color: white;
-  font-size: 1.5em;
+  // font-size: 1.5em;
   flex-direction: column;
   &__link {
     color: white;
@@ -669,6 +749,9 @@ footer {
     &__partenaire {
       // margin-left: 20px;
     }
+  }
+  &__logo {
+    font-family: "Shrikhand";
   }
 }
 
@@ -715,9 +798,6 @@ footer {
     .group-card {
       order: 0;
     }
-    .headerPage__logo {
-      // order: -3;
-    }
   }
 }
 .headerPage__menu {
@@ -746,10 +826,6 @@ footer {
     height: 260px;
   }
   &__div {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // justify-content: space-evenly;
     width: 80%;
     position: relative;
     height: 100%;
@@ -889,11 +965,19 @@ footer {
       position: relative;
       width: 100%;
       text-align: center;
-      font-size: 1.5em;
+      font-size: 1em;
       font-weight: 900;
       bottom: -11px;
+      @include mobile-M {
+        font-size: 1.3em;
+        bottom: 0px;
+      }
       @include mobile-L {
-        font-size: 2em;
+        font-size: 1.5em;
+        bottom: 0px;
+      }
+      @include mobile-XL {
+        font-size: 1.8em;
         bottom: 0px;
       }
       @include labtop {
@@ -901,36 +985,33 @@ footer {
         bottom: 8px;
       }
     }
-    // &__heart {
-    //   width: 20px;
-    //   fill: green;
-    // }
-    // & i {
-    //   position: absolute;
-    //   right: 0px;
-    //   top: 32px;
-    //   // display: flex;
-    //   // justify-content: center;
-    //   align-items: center;
-    //   // border: 1px solid black;
-    //   width: 20%;
-    //   font-size: 1.3em;
-    //   @include mobile-L {
-    //     font-size: 2em;
-    //     top: 28px;
-    //   }
-
-    //   &:hover {
-    //     color: $color-primary;
-    //     font-weight: 600;
-    //   }
-    // }
+    // ============================Animation coeur===================
     &__group__i {
       position: absolute;
       width: 30px;
       height: 30px;
-      left: 78%;
-      top: 26%;
+      left: 86%;
+      top: 30%;
+
+      @include mobile {
+        font-size: 0.5em;
+        top: 20%;
+        left: 78%;
+      }
+      @include mobile-M {
+        font-size: 0.6em;
+        top: 16%;
+      }
+
+      @include mobile-L {
+        font-size: 0.8em;
+        top: 20%;
+      }
+      @include mobile-XL {
+        left: 80%;
+        top: 30%;
+        font-size: 1em;
+      }
       & i {
         font-size: 2em;
         color: #2e2e2e;
@@ -983,6 +1064,14 @@ footer {
         height: 33px;
         width: 60px;
         border-bottom: 3px solid $color-tertiaire;
+        @include mobile {
+          height: 18px;
+          width: 35px;
+        }
+        @include mobile-XL {
+          height: 33px;
+          width: 60px;
+        }
       }
     }
     &__section1,
@@ -1055,7 +1144,7 @@ footer {
         margin-left: 10px;
         width: 70%;
         &__plate {
-          font-size: 1em;
+          // font-size: 1em;
           margin: 0;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -1161,6 +1250,7 @@ footer {
     height: 60px;
     width: 100%;
     align-items: center;
+    margin-bottom: 10px;
     & p {
       display: flex;
       flex-direction: column;
@@ -1173,7 +1263,7 @@ footer {
       @include radius;
       background-color: $color-secondary;
       box-shadow: 4px 8px 18px darken(grey, 10);
-      margin-bottom: 20px;
+      // margin-bottom: 10%;
       &:hover {
         box-shadow: 4px 8px 18px darken(grey, 20);
         background-color: lighten($color-secondary, 5);

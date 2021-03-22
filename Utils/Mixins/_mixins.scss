@@ -34,18 +34,7 @@
 //     repeat: $repeat;
 //   }
 // }
-@mixin roboto {
-  @font-face {
-    font-family: "Roboto";
-    src: url(/fonts/Roboto/Roboto-Regular.ttf);
-  }
-}
-@mixin shrikhand {
-  @font-face {
-    font-family: "Shrikhand";
-    src: url(/fonts/Shrikhand/Shrikhand-Regular.ttf);
-  }
-}
+
 // @mixin btn-shadow($color: $color-primary, $size: $btn-shadow-size) {
 //   box-shadow: $size $size darken($color, 10%);
 // }
