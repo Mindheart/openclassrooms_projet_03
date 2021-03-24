@@ -865,6 +865,12 @@ footer {
     bottom: 8px;
   }
 }
+@media screen and (min-width: 2560px) {
+  .pageMenu__name__description {
+    font-size: 3em;
+    bottom: 8px;
+  }
+}
 .pageMenu__name__group__i {
   position: absolute;
   width: 30px;
@@ -906,6 +912,12 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
+@media screen and (min-width: 2560px) {
+  .pageMenu__name__group__i i {
+    top: 116%;
+    font-size: 3em;
+  }
 }
 .pageMenu__name__group__i #i {
   position: absolute;

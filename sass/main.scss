@@ -1003,6 +1003,10 @@ footer {
         font-size: 2.3em;
         bottom: 8px;
       }
+      @include labtop-4K {
+        font-size: 3em;
+        bottom: 8px;
+      }
     }
     // ============================Animation coeur===================
     &__group__i {
@@ -1039,6 +1043,10 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
+        @include labtop-4K {
+          top: 116%;
+          font-size: 3em;
+        }
       }
       #i {
         position: absolute;
