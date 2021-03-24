@@ -118,7 +118,7 @@ h2,
 h3,
 h4,
 a,
-.description__search {
+.descriptor__search {
   font-family: "Roboto";
   @include mobile {
     font-size: 0.8em;
@@ -144,10 +144,16 @@ h1 {
 // ======================Loading Spinner==============
 .acceuil {
   &__progress {
-    @include position;
-    width: 100px;
-    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // margin: 0 auto;
+
+    width: 15%;
+    height: 5%;
     //border: 1px solid black;
+    margin: 0;
     &__bar {
       height: 98%;
       width: 99%;
@@ -330,6 +336,7 @@ h1 {
       & {
         color: black;
         position: relative;
+        left: 4%;
         transform: translateX(-6%);
         -webkit-transform: translateX(-6%);
         -moz-transform: translateX(-6%);
@@ -381,14 +388,16 @@ h1 {
   // &__choose {
   // }
   & i {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    // text-align: center;
-    // border: 1px solid yellow;
-    width: 10%;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
+    //justify-content: center;
+    //text-align: center;
+    //border: 1px solid yellow;
+    position: absolute;
+    left: 14%;
+    transform: translate(-50%);
+    width: 5%;
     &:hover {
       color: #9356dc;
       font-size: 2em;
@@ -411,20 +420,34 @@ h1 {
     // order: 4;
   }
   &__location {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+    position: relative;
     align-items: center;
     width: 100%;
     height: 80px;
     // font-size: 1.5em;
     background-color: #eaeaea;
     @include center;
-    // padding-bottom: 20px;
+    padding-bottom: 20px;
+    &__p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
     & i {
       position: absolute;
       left: 32%;
-      margin-right: 40px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      // margin-right: 40px;
       color: black;
     }
   }
@@ -485,8 +508,8 @@ h1 {
     @include labtop {
       position: absolute;
       left: 17%;
-      top: 50%;
-      width: 24%;
+      top: 46.5%;
+      width: 23%;
       height: 30px;
       // font-size: 1.2em;
       border-left: 1px solid black;
@@ -500,10 +523,6 @@ h1 {
         border: none;
       }
       border-radius: 0;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      -o-border-radius: 0;
     }
     @include labtop-L {
       // left: 275px;
@@ -899,7 +918,7 @@ footer {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  animation: opacity 3s ease-in-out 1;
+  animation: opacity 2s ease-in-out 1;
   @keyframes opacity {
     0% {
       opacity: 0;
@@ -913,7 +932,7 @@ footer {
 }
 .group__pageMenu__section__plats {
   @include groupSection;
-  animation: opacity 4s ease-in-out 1;
+  animation: opacity 5s ease-in-out 1;
   @keyframes opacity {
     0% {
       opacity: 0;
@@ -927,7 +946,7 @@ footer {
 }
 .group__pageMenu__section__desserts {
   @include groupSection;
-  animation: opacity 5s ease-in-out 1;
+  animation: opacity 7s ease-in-out 1;
   @keyframes opacity {
     0% {
       opacity: 0;
@@ -1057,20 +1076,29 @@ footer {
 
     &__titre {
       // border: 1px solid black;
+      position: relative;
       width: 85%;
       &::before {
         position: absolute;
         content: "";
-        height: 33px;
-        width: 60px;
+        bottom: -27%;
+        width: 30px;
         border-bottom: 3px solid $color-tertiaire;
-        @include mobile {
-          height: 18px;
-          width: 35px;
+        //  @include mobile-S {
+        // bottom: -27%;
+        // width: 30px;
+        //  }
+        @include labtop-L {
+          bottom: -27%;
+          width: 45px;
         }
-        @include mobile-XL {
-          height: 33px;
-          width: 60px;
+        // @include mobile-XL {
+        //   height: 23px;
+        //   width: 32px;
+        // }
+        @include labtop-4K {
+          height: -27%;
+          width: 58px;
         }
       }
     }
@@ -1171,74 +1199,74 @@ footer {
       }
     }
     // =====================ANIMATION=================================
-    &__section1 {
-      animation: opacity 1s ease-in-out 1;
-      @keyframes opacity {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-          -webkit-transform: translateY(50px);
-          -moz-transform: translateY(50px);
-          -ms-transform: translateY(50px);
-          -o-transform: translateY(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
-    }
-    &__section2 {
-      animation: opacity1 2s ease-in-out 1;
-      @keyframes opacity1 {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-          -webkit-transform: translateY(50px);
-          -moz-transform: translateY(50px);
-          -ms-transform: translateY(50px);
-          -o-transform: translateY(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
-    }
-    &__section3 {
-      animation: opacity2 3s ease-in-out 1;
-      @keyframes opacity2 {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-          -webkit-transform: translateY(50px);
-          -moz-transform: translateY(50px);
-          -ms-transform: translateY(50px);
-          -o-transform: translateY(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
-    }
-    &__section4 {
-      animation: opacity4 4s ease-in-out 1;
-      @keyframes opacity4 {
-        0% {
-          opacity: 0;
-          transform: translateY(50px);
-          -webkit-transform: translateY(50px);
-          -moz-transform: translateY(50px);
-          -ms-transform: translateY(50px);
-          -o-transform: translateY(50px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0px);
-        }
-      }
-    }
+    // &__section1 {
+    //   animation: opacity 1s ease-in-out 1;
+    //   @keyframes opacity {
+    //     0% {
+    //       opacity: 0;
+    //       transform: translateY(50px);
+    //       -webkit-transform: translateY(50px);
+    //       -moz-transform: translateY(50px);
+    //       -ms-transform: translateY(50px);
+    //       -o-transform: translateY(50px);
+    //     }
+    //     100% {
+    //       opacity: 1;
+    //       transform: translateY(0px);
+    //     }
+    //   }
+    // }
+    // &__section2 {
+    //   animation: opacity1 2s ease-in-out 1;
+    //   @keyframes opacity1 {
+    //     0% {
+    //       opacity: 0;
+    //       transform: translateY(50px);
+    //       -webkit-transform: translateY(50px);
+    //       -moz-transform: translateY(50px);
+    //       -ms-transform: translateY(50px);
+    //       -o-transform: translateY(50px);
+    //     }
+    //     100% {
+    //       opacity: 1;
+    //       transform: translateY(0px);
+    //     }
+    //   }
+    // }
+    // &__section3 {
+    //   animation: opacity2 3s ease-in-out 1;
+    //   @keyframes opacity2 {
+    //     0% {
+    //       opacity: 0;
+    //       transform: translateY(50px);
+    //       -webkit-transform: translateY(50px);
+    //       -moz-transform: translateY(50px);
+    //       -ms-transform: translateY(50px);
+    //       -o-transform: translateY(50px);
+    //     }
+    //     100% {
+    //       opacity: 1;
+    //       transform: translateY(0px);
+    //     }
+    //   }
+    // }
+    // &__section4 {
+    //   animation: opacity4 4s ease-in-out 1;
+    //   @keyframes opacity4 {
+    //     0% {
+    //       opacity: 0;
+    //       transform: translateY(50px);
+    //       -webkit-transform: translateY(50px);
+    //       -moz-transform: translateY(50px);
+    //       -ms-transform: translateY(50px);
+    //       -o-transform: translateY(50px);
+    //     }
+    //     100% {
+    //       opacity: 1;
+    //       transform: translateY(0px);
+    //     }
+    //   }
+    // }
   }
   //  ===============================================================
   &__button {
