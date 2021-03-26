@@ -8,7 +8,9 @@
 //     src: url(/fonts/Roboto/Roboto-Regular.ttf);
 //   }
 // }
-
+@mixin gradient {
+  background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+}
 @font-face {
   font-family: "Roboto";
   src: url("font-face/Roboto/Roboto-Regular.ttf"),
@@ -301,6 +303,7 @@ h1 {
       display: none;
     }
   }
+
   &__link {
     display: flex;
     align-items: center;
@@ -312,11 +315,11 @@ h1 {
     cursor: pointer;
     @include radius;
     margin-bottom: 20px;
-    & :hover {
-      // width: 100%;
-      // height: 100px;
-      // align-items: center;
-      // background-color: $color-primary;
+    &--choose:hover {
+      width: 100%;
+      align-items: center;
+      height: 75px;
+      background: #f5edff;
       @include radius;
     }
 
@@ -354,7 +357,6 @@ h1 {
       background-color: #9356dc;
       height: 30px;
       width: 30px;
-      border: 1px solid black;
       border-radius: 50%;
 
       &__p {
@@ -394,13 +396,15 @@ h1 {
     //justify-content: center;
     //text-align: center;
     //border: 1px solid yellow;
+    cursor: pointer;
     position: absolute;
-    left: 14%;
+    left: 20%;
     transform: translate(-50%);
     width: 5%;
+    z-index: 1;
     &:hover {
       color: #9356dc;
-      font-size: 2em;
+      // font-size: 2em;
     }
   }
 }
@@ -426,7 +430,7 @@ h1 {
     position: relative;
     align-items: center;
     width: 100%;
-    height: 80px;
+    height: 22px;
     // font-size: 1.5em;
     background-color: #eaeaea;
     @include center;
@@ -444,11 +448,30 @@ h1 {
     }
     & i {
       position: absolute;
-      left: 32%;
+      left: 28%;
       top: 50%;
       transform: translate(-50%, -50%);
       // margin-right: 40px;
       color: black;
+      @include mobile-M {
+        left: 33%;
+      }
+      @include mobile-L {
+        left: 34%;
+      }
+      @include mobile-XL {
+        left: 37%;
+      }
+
+      @include tablet {
+        left: 40%;
+      }
+      @include labtop {
+        left: 43%;
+      }
+      @include labtop-4K {
+        left: 46%;
+      }
     }
   }
   &__reserve {
@@ -460,6 +483,7 @@ h1 {
       // font-size: 1.5em;
       font-weight: 900;
       width: 80%;
+      font-size: 1.2em;
       @include center;
     }
     @include labtop {
@@ -488,7 +512,7 @@ h1 {
     height: 41px;
     color: white;
     @include radius;
-    background: linear-gradient(to bottom, #bb63db, #a51ad8);
+    background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
     box-shadow: 4px 8px 18px grey;
     @include center;
     &:hover {
@@ -507,13 +531,15 @@ h1 {
 
     @include labtop {
       position: absolute;
-      left: 17%;
-      top: 46.5%;
-      width: 23%;
+      left: 20%;
+      top: 58.5%;
+      width: 20%;
       height: 30px;
       // font-size: 1.2em;
       border-left: 1px solid black;
-      border: none;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
       background: none;
       color: black;
       box-shadow: none;
@@ -601,7 +627,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 251px;
+  height: 213px;
   border-radius: 20px;
   background-color: white;
   border: 1px solid lightgrey;
@@ -664,6 +690,7 @@ h1 {
         font-weight: bold;
         top: 50%;
         left: 50%;
+        z-index: 1;
         transform: translate(-50%, -50%);
         -webkit-transform: translate(-50%, -50%);
         -moz-transform: translate(-50%, -50%);
@@ -678,7 +705,7 @@ h1 {
       i:hover + #i {
         cursor: pointer;
         font-weight: bold;
-        font-size: 1.8em;
+        font-size: 2.1em;
         // color: #b060db;
       }
     }
@@ -686,8 +713,11 @@ h1 {
     &__nouveau__h {
       position: absolute;
       background-color: #99e2d0;
+      padding: 5px;
+      border-radius: 3px;
+      color: green;
       top: 10px;
-      right: 44px;
+      right: 16px;
     }
 
     &__nouveau1__h {
@@ -1069,7 +1099,7 @@ footer {
       i:hover + #i {
         cursor: pointer;
         font-weight: bold;
-        font-size: 1.8em;
+        font-size: 2.1em;
         // color: #b060db;
       }
     }
@@ -1139,6 +1169,9 @@ footer {
       &:hover &__validator {
         width: 100px;
       }
+      &:hover &__accompaniment {
+        width: 43%;
+      }
       &:hover &__validator i {
         transform: rotate(360deg);
         -webkit-transform: rotate(360deg);
@@ -1179,6 +1212,7 @@ footer {
         justify-content: space-evenly;
         margin-left: 10px;
         width: 70%;
+        transition: width 2s ease-in-out;
         &__plate {
           // font-size: 1em;
           margin: 0;
@@ -1297,7 +1331,8 @@ footer {
       justify-content: center;
       text-decoration: none;
       @include radius;
-      background-color: $color-secondary;
+      @include gradient;
+      // background-color: $color-secondary;
       box-shadow: 4px 8px 18px darken(grey, 10);
       // margin-bottom: 10%;
       &:hover {

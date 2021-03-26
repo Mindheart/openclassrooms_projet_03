@@ -205,7 +205,11 @@ h1 {
   -o-border-radius: 20px;
   margin-bottom: 20px;
 }
-.menuNav__link :hover {
+.menuNav__link--choose:hover {
+  width: 100%;
+  align-items: center;
+  height: 75px;
+  background: #f5edff;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -244,7 +248,6 @@ h1 {
   background-color: #9356dc;
   height: 30px;
   width: 30px;
-  border: 1px solid black;
   border-radius: 50%;
 }
 .menuNav__link__circle__p {
@@ -275,14 +278,15 @@ h1 {
   }
 }
 .menuNav i {
+  cursor: pointer;
   position: absolute;
-  left: 14%;
+  left: 20%;
   transform: translate(-50%);
   width: 5%;
+  z-index: 1;
 }
 .menuNav i:hover {
   color: #9356dc;
-  font-size: 2em;
 }
 
 .descriptor {
@@ -303,7 +307,7 @@ h1 {
   position: relative;
   align-items: center;
   width: 100%;
-  height: 80px;
+  height: 22px;
   background-color: #eaeaea;
   text-align: center;
   padding-bottom: 20px;
@@ -321,10 +325,40 @@ h1 {
 }
 .descriptor__location i {
   position: absolute;
-  left: 32%;
+  left: 28%;
   top: 50%;
   transform: translate(-50%, -50%);
   color: black;
+}
+@media screen and (min-width: 375px) {
+  .descriptor__location i {
+    left: 33%;
+  }
+}
+@media screen and (min-width: 425px) {
+  .descriptor__location i {
+    left: 34%;
+  }
+}
+@media screen and (min-width: 625px) {
+  .descriptor__location i {
+    left: 37%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .descriptor__location i {
+    left: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .descriptor__location i {
+    left: 43%;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .descriptor__location i {
+    left: 46%;
+  }
 }
 .descriptor__reserve {
   display: flex;
@@ -334,6 +368,7 @@ h1 {
 .descriptor__reserve__titre {
   font-weight: 900;
   width: 80%;
+  font-size: 1.2em;
   text-align: center;
 }
 @media screen and (min-width: 1024px) {
@@ -361,7 +396,7 @@ h1 {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  background: linear-gradient(to bottom, #bb63db, #a51ad8);
+  background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   box-shadow: 4px 8px 18px grey;
   text-align: center;
 }
@@ -372,12 +407,14 @@ h1 {
 @media screen and (min-width: 1024px) {
   .descriptor__search {
     position: absolute;
-    left: 17%;
-    top: 46.5%;
-    width: 23%;
+    left: 20%;
+    top: 58.5%;
+    width: 20%;
     height: 30px;
     border-left: 1px solid black;
-    border: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
     background: none;
     color: black;
     box-shadow: none;
@@ -449,7 +486,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 251px;
+  height: 213px;
   border-radius: 20px;
   background-color: white;
   border: 1px solid lightgrey;
@@ -516,6 +553,7 @@ h1 {
   font-weight: bold;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -530,13 +568,16 @@ h1 {
 .card__name__group__i i:hover + #i {
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 2.1em;
 }
 .card__name__nouveau__h {
   position: absolute;
   background-color: #99e2d0;
+  padding: 5px;
+  border-radius: 3px;
+  color: green;
   top: 10px;
-  right: 44px;
+  right: 16px;
 }
 .card__name__nouveau1__h {
   position: absolute;
@@ -940,7 +981,7 @@ footer {
 .pageMenu__name__group__i i:hover + #i {
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 2.1em;
 }
 .pageMenu__section {
   display: flex;
@@ -990,6 +1031,9 @@ footer {
 .pageMenu__section__section1:hover .pageMenu__section__section1__validator, .pageMenu__section__section1:hover .pageMenu__section__section2__validator, .pageMenu__section__section1:hover .pageMenu__section__section3__validator, .pageMenu__section__section1:hover .pageMenu__section__section4__validator, .pageMenu__section__section2:hover .pageMenu__section__section1__validator, .pageMenu__section__section2:hover .pageMenu__section__section2__validator, .pageMenu__section__section2:hover .pageMenu__section__section3__validator, .pageMenu__section__section2:hover .pageMenu__section__section4__validator, .pageMenu__section__section3:hover .pageMenu__section__section1__validator, .pageMenu__section__section3:hover .pageMenu__section__section2__validator, .pageMenu__section__section3:hover .pageMenu__section__section3__validator, .pageMenu__section__section3:hover .pageMenu__section__section4__validator, .pageMenu__section__section4:hover .pageMenu__section__section1__validator, .pageMenu__section__section4:hover .pageMenu__section__section2__validator, .pageMenu__section__section4:hover .pageMenu__section__section3__validator, .pageMenu__section__section4:hover .pageMenu__section__section4__validator {
   width: 100px;
 }
+.pageMenu__section__section1:hover .pageMenu__section__section1__accompaniment, .pageMenu__section__section1:hover .pageMenu__section__section2__accompaniment, .pageMenu__section__section1:hover .pageMenu__section__section3__accompaniment, .pageMenu__section__section1:hover .pageMenu__section__section4__accompaniment, .pageMenu__section__section2:hover .pageMenu__section__section1__accompaniment, .pageMenu__section__section2:hover .pageMenu__section__section2__accompaniment, .pageMenu__section__section2:hover .pageMenu__section__section3__accompaniment, .pageMenu__section__section2:hover .pageMenu__section__section4__accompaniment, .pageMenu__section__section3:hover .pageMenu__section__section1__accompaniment, .pageMenu__section__section3:hover .pageMenu__section__section2__accompaniment, .pageMenu__section__section3:hover .pageMenu__section__section3__accompaniment, .pageMenu__section__section3:hover .pageMenu__section__section4__accompaniment, .pageMenu__section__section4:hover .pageMenu__section__section1__accompaniment, .pageMenu__section__section4:hover .pageMenu__section__section2__accompaniment, .pageMenu__section__section4:hover .pageMenu__section__section3__accompaniment, .pageMenu__section__section4:hover .pageMenu__section__section4__accompaniment {
+  width: 43%;
+}
 .pageMenu__section__section1:hover .pageMenu__section__section1__validator i, .pageMenu__section__section1:hover .pageMenu__section__section2__validator i, .pageMenu__section__section1:hover .pageMenu__section__section3__validator i, .pageMenu__section__section1:hover .pageMenu__section__section4__validator i, .pageMenu__section__section2:hover .pageMenu__section__section1__validator i, .pageMenu__section__section2:hover .pageMenu__section__section2__validator i, .pageMenu__section__section2:hover .pageMenu__section__section3__validator i, .pageMenu__section__section2:hover .pageMenu__section__section4__validator i, .pageMenu__section__section3:hover .pageMenu__section__section1__validator i, .pageMenu__section__section3:hover .pageMenu__section__section2__validator i, .pageMenu__section__section3:hover .pageMenu__section__section3__validator i, .pageMenu__section__section3:hover .pageMenu__section__section4__validator i, .pageMenu__section__section4:hover .pageMenu__section__section1__validator i, .pageMenu__section__section4:hover .pageMenu__section__section2__validator i, .pageMenu__section__section4:hover .pageMenu__section__section3__validator i, .pageMenu__section__section4:hover .pageMenu__section__section4__validator i {
   transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
@@ -1027,6 +1071,7 @@ footer {
   justify-content: space-evenly;
   margin-left: 10px;
   width: 70%;
+  transition: width 2s ease-in-out;
 }
 .pageMenu__section__section1__accompaniment__plate, .pageMenu__section__section2__accompaniment__plate, .pageMenu__section__section3__accompaniment__plate, .pageMenu__section__section4__accompaniment__plate {
   margin: 0;
@@ -1073,7 +1118,7 @@ footer {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  background-color: #ff79da;
+  background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   box-shadow: 4px 8px 18px #676767;
 }
 .pageMenu__button p:hover {
