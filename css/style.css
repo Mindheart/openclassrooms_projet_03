@@ -201,6 +201,9 @@ h1 {
   -o-border-radius: 20px;
   margin-bottom: 20px;
 }
+.menuNav__link--choose {
+  width: 100%;
+}
 .menuNav__link--choose:hover {
   background: #f5edff;
 }
@@ -233,8 +236,9 @@ h1 {
   -o-transform: translateX(-6%);
 }
 .menuNav__link__circle {
-  position: relative;
-  right: 13px;
+  position: absolute;
+  left: 5%;
+  transform: translateX(-50%);
   text-align: center;
   color: white;
   background-color: #9356dc;

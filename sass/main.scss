@@ -316,8 +316,8 @@ h1 {
     @include radius;
     margin-bottom: 20px;
     &--choose {
+      width: 100%;
       &:hover {
-        // width: 100%;
         // align-items: center;
         // height: 75px;
         background: #f5edff;
@@ -356,17 +356,15 @@ h1 {
       }
     }
     &__circle {
-      //display: flex;
-      //justify-content: center;
-      position: relative;
-      right: 13px;
+      position: absolute;
+      left: 5%;
+      transform: translateX(-50%);
       text-align: center;
       color: white;
       background-color: #9356dc;
       height: 30px;
       width: 30px;
       border-radius: 50%;
-
       &__p {
         position: absolute;
         top: 50%;
@@ -532,8 +530,7 @@ h1 {
     box-shadow: 4px 8px 18px grey;
     @include center;
     cursor: pointer;
-    &__p {
-    }
+
     &:hover {
       background-color: lighten(#bb63db, 5);
       box-shadow: 4px 8px 18px darken(grey, 40);
