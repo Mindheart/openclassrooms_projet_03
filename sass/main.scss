@@ -315,16 +315,21 @@ h1 {
     cursor: pointer;
     @include radius;
     margin-bottom: 20px;
-    &--choose:hover {
-      width: 100%;
-      align-items: center;
-      height: 75px;
-      background: #f5edff;
-      @include radius;
+    &--choose {
+      &:hover {
+        // width: 100%;
+        // align-items: center;
+        // height: 75px;
+        background: #f5edff;
+        // @include radius;
+        @include labtop {
+          background: none;
+        }
+      }
     }
 
     & a {
-      width: 100%;
+      // width: 100%;
       text-decoration: none;
       align-items: center;
       text-align: center;
@@ -526,6 +531,9 @@ h1 {
     background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
     box-shadow: 4px 8px 18px grey;
     @include center;
+    cursor: pointer;
+    &__p {
+    }
     &:hover {
       background-color: lighten(#bb63db, 5);
       box-shadow: 4px 8px 18px darken(grey, 40);
@@ -548,7 +556,6 @@ h1 {
       &:hover {
         background: none;
         box-shadow: none;
-        border: none;
       }
       border-radius: 0;
     }

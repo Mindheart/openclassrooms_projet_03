@@ -202,18 +202,14 @@ h1 {
   margin-bottom: 20px;
 }
 .menuNav__link--choose:hover {
-  width: 100%;
-  align-items: center;
-  height: 75px;
   background: #f5edff;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .menuNav__link--choose:hover {
+    background: none;
+  }
 }
 .menuNav__link a {
-  width: 100%;
   text-decoration: none;
   align-items: center;
   text-align: center;
@@ -406,6 +402,7 @@ h1 {
   background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   box-shadow: 4px 8px 18px grey;
   text-align: center;
+  cursor: pointer;
 }
 .descriptor__search:hover {
   background-color: #c478e0;
@@ -430,7 +427,6 @@ h1 {
   .descriptor__search:hover {
     background: none;
     box-shadow: none;
-    border: none;
   }
 }
 @media screen and (min-width: 1440px) {
