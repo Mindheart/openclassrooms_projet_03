@@ -61,3 +61,83 @@
 //     @content;
 //   }
 // }
+@mixin groupSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+@mixin mobile {
+  @media screen and(min-width:map-get($breakpoints,mobile)) {
+    @content;
+  }
+}
+@mixin mobile-S {
+  @media screen and (min-width: map-get($breakpoints,mobile-S)) {
+    @content;
+  }
+}
+@mixin mobile-M {
+  @media screen and (min-width: map-get($breakpoints,mobile-M)) {
+    @content;
+  }
+}
+@mixin mobile-L {
+  @media screen and (min-width: map-get($breakpoints,mobile-L)) {
+    @content;
+  }
+}
+@mixin mobile-XL {
+  @media screen and(min-width:map-get($breakpoints,mobile-XL)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: map-get($breakpoints,tablet)) {
+    @content;
+  }
+}
+@mixin tablet-L {
+  @media screen and (min-width: map-get($breakpoints,tablet-L)) {
+    @content;
+  }
+}
+@mixin labtop {
+  @media screen and (min-width: map-get($breakpoints,labtop)) {
+    @content;
+  }
+}
+@mixin labtop-L {
+  @media screen and (min-width: map-get($breakpoints,labtop-L)) {
+    @content;
+  }
+}
+@mixin labtop-XL {
+  @media screen and (min-width: map-get($breakpoints,labtop-XL)) {
+    @content;
+  }
+}
+@mixin labtop-2K {
+  @media screen and (min-width: map-get($breakpoints,labtop-2K)) {
+    @content;
+  }
+}
+
+@mixin labtop-4K {
+  @media screen and (min-width: map-get($breakpoints,labtop-4K)) {
+    @content;
+  }
+}
+
+@mixin position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}

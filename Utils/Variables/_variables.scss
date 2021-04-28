@@ -14,5 +14,19 @@
 $breakpoints: (
   mobile: 320px,
   //   mobile-M: 375px,
-  //   mobile-L: 425px,,
+  //   mobile-L: 425px,,,,
+);
+$breakpoints: (
+  mobile: 200px,
+  mobile-S: 320px,
+  mobile-M: 375px,
+  mobile-L: 425px,
+  mobile-XL: 625px,
+  tablet: 768px,
+  tablet-L: 780px,
+  labtop: 1024px,
+  labtop-L: 1440px,
+  labtop-XL: 1600px,
+  labtop-2K: 2000px,
+  labtop-4K: 2560px,
 );
