@@ -648,10 +648,16 @@ footer {
   &__utensils {
     display: flex;
     align-items: center;
+    & i.fas {
+      padding-right: 8px;
+    }
   }
   &__handshake {
     display: flex;
     align-items: center;
+    & i.fas {
+      padding-right: 8px;
+    }
     &__partenaire {
       // margin-left: 20px;
     }
@@ -1188,8 +1194,9 @@ footer {
       box-shadow: 4px 8px 18px darken(grey, 10);
       // margin-bottom: 10%;
       &:hover {
-        box-shadow: 4px 8px 18px darken(grey, 20);
-        background-color: lighten($color-secondary, 5);
+        box-shadow: 9px 9px 7px darken(grey, 20);
+        background-color: lighten($color-secondary, 20);
+        text-shadow: 1px 1px 2px white;
       }
 
       @include tablet {

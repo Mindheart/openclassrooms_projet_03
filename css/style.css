@@ -660,9 +660,15 @@ footer {
   display: flex;
   align-items: center;
 }
+.footerPage__utensils i.fas {
+  padding-right: 8px;
+}
 .footerPage__handshake {
   display: flex;
   align-items: center;
+}
+.footerPage__handshake i.fas {
+  padding-right: 8px;
 }
 .footerPage__logo {
   font-family: "Shrikhand";
@@ -1182,8 +1188,9 @@ footer {
   box-shadow: 4px 8px 18px #676767;
 }
 .pageMenu__button p:hover {
-  box-shadow: 4px 8px 18px #4d4d4d;
-  background-color: #ff93e1;
+  box-shadow: 9px 9px 7px #4d4d4d;
+  background-color: #ffdff6;
+  text-shadow: 1px 1px 2px white;
 }
 @media screen and (min-width: 768px) {
   .pageMenu__button p {
