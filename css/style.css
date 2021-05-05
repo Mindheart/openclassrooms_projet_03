@@ -213,6 +213,9 @@ h1 {
     background: none;
   }
 }
+.menuNav__link--choose:hover i {
+  color: #9356dc;
+}
 .menuNav__link a {
   text-decoration: none;
   align-items: center;
@@ -526,6 +529,7 @@ h1 {
 }
 .card__name__group__i {
   position: relative;
+  cursor: pointer;
   width: 30px;
   height: 30px;
 }
@@ -549,7 +553,7 @@ h1 {
     font-size: 1em;
   }
 }
-.card__name__group__i .far.fa-heart {
+.card__name__group__i i.far.fa-heart {
   font-size: 2em;
   color: #2e2e2e;
   position: absolute;
@@ -562,13 +566,13 @@ h1 {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
-.card__name__group__i .far.fa-heart.far--i {
+.card__name__group__i i.fas.fa-heart.far--i {
   position: absolute;
-  font-size: 0em;
-  background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+  font-size: 2em;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-weight: bold;
   top: 50%;
   left: 50%;
   z-index: 3;
@@ -578,15 +582,19 @@ h1 {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transition: font-size 1s ease-in-out;
-  -webkit-transition: font-size 1s ease-in-out;
-  -moz-transition: font-size 1s ease-in-out;
-  -ms-transition: font-size 1s ease-in-out;
-  -o-transition: font-size 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
 }
-.card__name__group__i :hover + .far.fa-heart.far--i {
-  font-weight: bold;
-  font-size: 2.1em;
+.card__name__group__i:hover i.far.fa-heart {
+  display: none;
+}
+.card__name__group__i:hover i.fas.fa-heart.far--i {
+  font-size: 2em;
+  opacity: 1;
+  display: block;
 }
 .card__name__nouveau__h {
   position: absolute;
@@ -987,7 +995,7 @@ footer {
     font-size: 1em;
   }
 }
-.pageMenu__name__group__i .far.fa-heart {
+.pageMenu__name__group__i i.far.fa-heart {
   font-size: 2em;
   color: #2e2e2e;
   position: absolute;
@@ -995,33 +1003,40 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
-@media screen and (min-width: 2560px) {
-  .pageMenu__name__group__i .far.fa-heart {
-    top: 116%;
-    font-size: 3em;
-  }
-}
-.pageMenu__name__group__i .far.fa-heart.far--i {
+.pageMenu__name__group__i i.fas.fa-heart.far--i {
   position: absolute;
-  font-size: 0em;
-  background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+  font-size: 2em;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  font-weight: bold;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  transition: font-size 1s ease-in-out;
-  -webkit-transition: font-size 1s ease-in-out;
-  -moz-transition: font-size 1s ease-in-out;
-  -ms-transition: font-size 1s ease-in-out;
-  -o-transition: font-size 1s ease-in-out;
-}
-.pageMenu__name__group__i :hover + .far.fa-heart.far--i {
+  z-index: 3;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 2.1em;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+}
+.pageMenu__name__group__i:hover i.far.fa-heart {
+  display: none;
+}
+.pageMenu__name__group__i:hover i.fas.fa-heart.far--i {
+  font-size: 2em;
+  opacity: 1;
+  display: block;
 }
 .pageMenu__section {
   display: flex;
@@ -1147,6 +1162,7 @@ footer {
   width: 100%;
   align-items: center;
   margin-bottom: 10px;
+  color: white;
 }
 .pageMenu__button p {
   display: flex;

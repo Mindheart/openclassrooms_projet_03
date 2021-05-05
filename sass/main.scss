@@ -218,6 +218,9 @@ h1 {
           background: none;
         }
       }
+      &:hover i {
+        color: #9356dc;
+      }
     }
 
     & a {
@@ -521,6 +524,7 @@ h1 {
     padding: 0px 20px;
     &__group__i {
       position: relative;
+      cursor: pointer;
       width: 30px;
       height: 30px;
       @include mobile {
@@ -537,10 +541,9 @@ h1 {
         font-size: 1em;
       }
 
-      .far.fa-heart {
+      i.far.fa-heart {
         font-size: 2em;
         color: #2e2e2e;
-
         position: absolute;
         top: 50%;
         left: 50%;
@@ -551,14 +554,14 @@ h1 {
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
       }
-      .far.fa-heart.far--i {
+      i.fas.fa-heart.far--i {
         position: absolute;
-        font-size: 0em;
-        // color: #b060db;
-        background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+        font-size: 2em;
+        opacity: 0;
+        background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        font-weight: bold;
+        // font-weight: bold;
         top: 50%;
         left: 50%;
         z-index: 3;
@@ -568,19 +571,19 @@ h1 {
         -moz-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
-        transition: font-size 1s ease-in-out;
-        -webkit-transition: font-size 1s ease-in-out;
-        -moz-transition: font-size 1s ease-in-out;
-        -ms-transition: font-size 1s ease-in-out;
-        -o-transition: font-size 1s ease-in-out;
-        // & :hover {
-        //   font-weight: bold;
-        //   font-size: 2.1em;
-        // }
+        transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
       }
-      & :hover + .far.fa-heart.far--i {
-        font-weight: bold;
-        font-size: 2.1em;
+      &:hover i.far.fa-heart {
+        display: none;
+      }
+      &:hover i.fas.fa-heart.far--i {
+        font-size: 2em;
+        opacity: 1;
+        display: block;
       }
     }
 
@@ -921,7 +924,7 @@ footer {
         top: 30%;
         font-size: 1em;
       }
-      .far.fa-heart {
+      i.far.fa-heart {
         font-size: 2em;
         color: #2e2e2e;
         position: absolute;
@@ -929,32 +932,41 @@ footer {
         left: 50%;
         transform: translate(-50%, -50%);
         cursor: pointer;
-        @include labtop-4K {
-          top: 116%;
-          font-size: 3em;
-        }
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
       }
-      .far.fa-heart.far--i {
+      i.fas.fa-heart.far--i {
         position: absolute;
-        font-size: 0em;
-        // color: #b060db;
-        background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+        font-size: 2em;
+        opacity: 0;
+        background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        font-weight: bold;
+        // font-weight: bold;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        transition: font-size 1s ease-in-out;
-        -webkit-transition: font-size 1s ease-in-out;
-        -moz-transition: font-size 1s ease-in-out;
-        -ms-transition: font-size 1s ease-in-out;
-        -o-transition: font-size 1s ease-in-out;
-      }
-      & :hover + .far.fa-heart.far--i {
+        z-index: 3;
         cursor: pointer;
-        font-weight: bold;
-        font-size: 2.1em;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transition: opacity 1s ease-in-out;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+      }
+      &:hover i.far.fa-heart {
+        display: none;
+      }
+      &:hover i.fas.fa-heart.far--i {
+        font-size: 2em;
+        opacity: 1;
+        display: block;
       }
     }
   }
@@ -1160,6 +1172,7 @@ footer {
     width: 100%;
     align-items: center;
     margin-bottom: 10px;
+    color: white;
     & p {
       display: flex;
       flex-direction: column;
