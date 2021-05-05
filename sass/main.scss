@@ -337,19 +337,19 @@ h1 {
       top: 50%;
       transform: translate(-50%, -50%);
       color: black;
-      @include mobile-M {
-        left: 33%;
-      }
+      // @include mobile-M {
+      //   left: 33%;
+      // }
       @include mobile-L {
         left: 34%;
       }
-      @include mobile-XL {
-        left: 37%;
-      }
+      // @include mobile-XL {
+      //   left: 37%;
+      // }
 
-      @include tablet {
-        left: 40%;
-      }
+      // @include tablet {
+      //   left: 40%;
+      // }
       // @include labtop {
       //   left: 43%;
       // }
@@ -411,6 +411,7 @@ h1 {
     &:hover {
       background-color: lighten(#bb63db, 5);
       box-shadow: 4px 8px 18px darken(grey, 40);
+      text-shadow: 1px 1px 2px white;
     }
 
     @include labtop {
@@ -949,6 +950,9 @@ footer {
         opacity: 0;
         background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
         -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        -ms-text-fill-color: transparent;
+        -o-text-fill-color: transparent;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -ms-background-clip: text;

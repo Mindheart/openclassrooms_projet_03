@@ -336,24 +336,9 @@ h1 {
   transform: translate(-50%, -50%);
   color: black;
 }
-@media screen and (min-width: 375px) {
-  .descriptor__location i {
-    left: 33%;
-  }
-}
 @media screen and (min-width: 425px) {
   .descriptor__location i {
     left: 34%;
-  }
-}
-@media screen and (min-width: 625px) {
-  .descriptor__location i {
-    left: 37%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .descriptor__location i {
-    left: 40%;
   }
 }
 .descriptor__reserve {
@@ -404,6 +389,7 @@ h1 {
 .descriptor__search:hover {
   background-color: #c478e0;
   box-shadow: 4px 8px 18px #1a1a1a;
+  text-shadow: 1px 1px 2px white;
 }
 @media screen and (min-width: 1024px) {
   .descriptor__search {
@@ -1020,6 +1006,9 @@ footer {
   opacity: 0;
   background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  -ms-text-fill-color: transparent;
+  -o-text-fill-color: transparent;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -ms-background-clip: text;
