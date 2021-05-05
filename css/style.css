@@ -1021,6 +1021,9 @@ footer {
   background-image: linear-gradient(to bottom, #ffa0f2, #a51ad8);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
   top: 50%;
   left: 50%;
   z-index: 3;
