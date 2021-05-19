@@ -276,12 +276,6 @@ h1 {
       }
     }
   }
-  &__link--choose1 {
-    // background: #f5edff;
-    @include labtop {
-      background: white;
-    }
-  }
 
   & i {
     cursor: pointer;

@@ -269,11 +269,6 @@ h1 {
     background-color: white;
   }
 }
-@media screen and (min-width: 1024px) {
-  .menuNav__link--choose1 {
-    background: white;
-  }
-}
 .menuNav i {
   cursor: pointer;
   position: absolute;
