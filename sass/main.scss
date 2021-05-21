@@ -21,12 +21,13 @@
   font-family: "Shrikhand";
   src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
 }
-
+h1,
 p,
 h2,
 h3,
 h4,
-a {
+a,
+input#search-box {
   font-family: "Roboto";
   @include mobile {
     font-size: 0.8em;
@@ -41,12 +42,13 @@ a {
     font-size: 1.6em;
   }
 }
-h1 {
-  font-family: "Shrikhand";
-}
+// h1 {
+//   font-family: "Shrikhand";
+// }
 
 // ======================Loading Spinner==============
 .acceuil {
+  margin: 0;
   &__progress {
     position: absolute;
     top: 50%;
@@ -135,6 +137,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 44px;
   // background-color: #f6f6f6;
   @include labtop {
     width: 100%;
@@ -209,7 +212,9 @@ h1 {
     margin-bottom: 20px;
     &--choose {
       width: 100%;
+      @include shadow;
       &:hover {
+        @include shadowDark;
         // align-items: center;
         // height: 75px;
         background: #f5edff;
@@ -271,6 +276,7 @@ h1 {
       -moz-border-radius: 0;
       -ms-border-radius: 0;
       -o-border-radius: 0;
+      box-shadow: none;
       & :hover {
         background-color: white;
       }
@@ -316,37 +322,57 @@ h1 {
     }
     &__p {
       position: absolute;
+      border: none;
+      text-align: center;
+      width: 100px;
+      background-color: #eaeaea;
       top: 50%;
       left: 50%;
       margin: 0;
+      padding: 0;
       transform: translate(-50%, -50%);
       -webkit-transform: translate(-50%, -50%);
       -moz-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
+      @include mobile-XL {
+        width: 120px;
+      }
+      @include labtop {
+        width: 120px;
+      }
+      @include labtop-L {
+        width: 175px;
+      }
+      @include labtop-XL {
+        width: 200px;
+      }
     }
     & i {
       position: absolute;
-      left: 28%;
+      left: 23%;
       top: 50%;
       transform: translate(-50%, -50%);
       color: black;
       // @include mobile-M {
       //   left: 33%;
       // }
+      // @include mobile {
+      //   left: 17%;
+      // }
       @include mobile-L {
-        left: 34%;
+        left: 30%;
       }
       // @include mobile-XL {
       //   left: 37%;
       // }
 
-      // @include tablet {
-      //   left: 40%;
-      // }
-      // @include labtop {
-      //   left: 43%;
-      // }
+      @include tablet {
+        left: 40%;
+      }
+      @include labtop {
+        left: 36%;
+      }
       // @include labtop-4K {
       //   left: 46%;
       // }
@@ -398,20 +424,22 @@ h1 {
     color: white;
     @include radius;
     background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
-    box-shadow: 4px 8px 18px grey;
+    // box-shadow: 4px 8px 18px grey;
+    @include shadow;
     @include center;
     cursor: pointer;
 
     &:hover {
       background-color: lighten(#bb63db, 5);
-      box-shadow: 4px 8px 18px darken(grey, 40);
+      // box-shadow: 4px 8px 18px darken(grey, 40);
+      @include shadowDark;
       text-shadow: 1px 1px 2px white;
     }
 
     @include labtop {
       position: absolute;
       left: 20%;
-      top: 53%;
+      top: 45%;
       width: 17.5%;
       height: 30px;
       border-left: 1px solid black;
@@ -428,7 +456,7 @@ h1 {
       border-radius: 0;
     }
     @include labtop-L {
-      top: 50%;
+      top: 42%;
       border-left: 1px solid black;
       border-radius: 0px;
       -webkit-border-radius: 0px;
@@ -437,10 +465,10 @@ h1 {
       -o-border-radius: 0px;
     }
     @include labtop-2K {
-      top: 50%;
+      top: 43%;
     }
     @include labtop-4K {
-      top: 48%;
+      top: 41%;
     }
   }
 }
@@ -450,11 +478,12 @@ h1 {
   width: 100%;
 }
 .group-card {
+  background-color: #f6f6f6;
   &__1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f6f6f6;
+    // background-color: #f6f6f6;
     @include labtop {
       flex-direction: row;
       order: 1;
@@ -462,6 +491,19 @@ h1 {
     @include tablet-L {
       flex-direction: row;
       order: 1;
+    }
+    // &__name {
+    //   font-family: "roboto";
+
+    //   @include tablet {
+    //     text-align: center;
+    //   }
+    // }
+    &__a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
     }
   }
   &__2 {
@@ -477,10 +519,24 @@ h1 {
     @include tablet-L {
       flex-direction: row;
     }
+    &__a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+    }
   }
 
   &__name {
-    text-align: center;
+    font-family: "roboto";
+    padding: 5%;
+
+    @include tablet {
+      text-align: center;
+    }
+    h1 {
+      // transform: translateX(45px);
+    }
   }
 }
 .card {
@@ -785,7 +841,7 @@ footer {
   }
 }
 // =================Animation group section section ===========
-.group__pageMenu__section__entrées {
+.group__pageMenu__section__entrees {
   @include groupSection;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -876,6 +932,7 @@ footer {
     position: relative;
     width: 100%;
     height: 99px;
+
     &__description {
       position: relative;
       width: 100%;
@@ -883,6 +940,7 @@ footer {
       font-size: 1em;
       font-weight: 900;
       bottom: -11px;
+      font-family: "Shrikhand";
       @include mobile-M {
         font-size: 1.3em;
         bottom: 0px;
@@ -997,7 +1055,7 @@ footer {
       &::before {
         position: absolute;
         content: "";
-        bottom: 0px;
+        bottom: -6px;
         width: 30px;
         border-bottom: 3px solid $color-tertiaire;
 
@@ -1095,12 +1153,14 @@ footer {
       &__price {
         width: 28%;
         text-align: center;
-        align-self: center;
+        align-self: flex-end;
         text-decoration: none;
+        margin-bottom: 20px;
       }
 
       & {
         text-decoration: none;
+        @include shadow;
       }
     }
     // =====================ANIMATION=================================

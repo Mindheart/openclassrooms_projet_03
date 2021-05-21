@@ -12,10 +12,10 @@
   -o-border-radius: 20px;
 }
 @mixin shadow {
-  box-shadow: 4px 8px 18px grey;
+  box-shadow: 4px 4px 8px grey;
 }
 @mixin shadowDark {
-  box-shadow: 4px 8px 18px darken(grey, 10);
+  box-shadow: 4px 8px 18px darken(grey, 40);
 }
 // @mixin borderRad {
 //   border-radius: 0 20px 20px 0;
@@ -144,3 +144,14 @@
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+// @mixin roboto {
+//   @font-face {
+//     font-family: "Roboto";
+//     src: url("../font-face/Roboto/Roboto-Regular.ttf");
+//   }
+// }
+
+// @font-face {
+//   font-family: "Shrikhand";
+//   src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
+// }
