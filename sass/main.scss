@@ -486,7 +486,7 @@ input#search-box {
     // background-color: #f6f6f6;
     @include labtop {
       flex-direction: row;
-      order: 1;
+      // order: 1;
     }
     @include tablet-L {
       flex-direction: row;
@@ -504,6 +504,13 @@ input#search-box {
       flex-direction: column;
       align-items: center;
       text-decoration: none;
+      & {
+        @include tablet-L {
+          & {
+            width: 50%;
+          }
+        }
+      }
     }
   }
   &__2 {
@@ -524,6 +531,13 @@ input#search-box {
       flex-direction: column;
       align-items: center;
       text-decoration: none;
+      & {
+        @include tablet-L {
+          & {
+            width: 50%;
+          }
+        }
+      }
     }
   }
 
@@ -665,6 +679,7 @@ input#search-box {
     display: flex;
     flex-direction: column;
     width: 100%;
+    color: black;
   }
   &__name__town {
     @include margin0;
