@@ -21,9 +21,6 @@
 @mixin shadowDark {
   box-shadow: 4px 8px 18px darken(grey, 40);
 }
-// @mixin borderRad {
-//   border-radius: 0 20px 20px 0;
-// }
 @mixin rad40 {
   border-radius: 30px 30px 0px 0px;
   -webkit-border-radius: 30px 30px 0px 0px;

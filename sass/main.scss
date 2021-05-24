@@ -5,15 +5,7 @@
 @import "../Components/_buttons.scss";
 @import "../Utils/Animations/_Animations.scss";
 @import "../Layout/_header.scss";
-// @mixin roboto {
-//   @font-face {
-//     font-family: "Roboto";
-//     src: url(/fonts/Roboto/Roboto-Regular.ttf);
-//   }
-// }
-// @mixin gradient {
-//   background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
-// }
+
 @font-face {
   font-family: "Roboto";
   src: url("../font-face/Roboto/Roboto-Regular.ttf"),
@@ -45,10 +37,6 @@ input#search-box {
     font-size: 1.6em;
   }
 }
-// h1 {
-//   font-family: "Shrikhand";
-// }
-
 .group__picture {
   position: relative;
   height: 70%;
@@ -214,7 +202,6 @@ input#search-box {
     height: 500px;
   }
 }
-
 // =====PageMenu/La palette /La note enchanté / ect....====
 .page {
   display: flex;
@@ -262,9 +249,7 @@ input#search-box {
 .pageMenu {
   display: flex;
   flex-direction: column;
-
   @include rad40;
-  // width: $breakpoint * 0.8;
   background-color: #f2f2f2;
   @include tablet {
     @include rad60;
@@ -298,9 +283,6 @@ input#search-box {
       font-family: "Shrikhand";
       margin: 0;
       @include mobile-M {
-        // top: 16%;
-        // left: 33%;
-        // transform: translate(-50%, -50%);
         font-size: 1.3em;
         bottom: 0px;
       }
@@ -309,9 +291,6 @@ input#search-box {
         bottom: 0px;
       }
       @include mobile-XL {
-        // top: 25%;
-        // left: 26%;
-        // transform: translate(-50%, -50%);
         font-size: 1.8em;
         bottom: 0px;
       }
@@ -342,10 +321,8 @@ input#search-box {
     height: auto;
 
     &__titre {
-      // border: 1px solid black;
       position: relative;
       width: 87%;
-      // margin-bottom: 10px;
       &::before {
         position: absolute;
         content: "";

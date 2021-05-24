@@ -77,9 +77,6 @@
     .group-card {
       order: 0;
     }
-    // .headerPage__logo {
-    //   // order: -3;
-    // }
   }
 }
 
@@ -438,7 +435,6 @@
       overflow: hidden;
       background: $color-tertiaire;
       border-radius: 0 20px 20px 0;
-      // @include bordeRad;
       transition: width 2s;
 
       i {
@@ -458,19 +454,15 @@
     &__accompaniment {
       display: flex;
       flex-direction: column;
-      // justify-content: space-evenly;
       justify-content: center;
       margin-left: 10px;
       width: 70%;
       transition: width 1s ease-in-out;
-
       -webkit-transition: width 1s ease-in-out;
       -moz-transition: width 1s ease-in-out;
       -ms-transition: width 1s ease-in-out;
       -o-transition: width 1s ease-in-out;
-
       &__plate {
-        // font-size: 1em;
         margin: 0;
         margin-bottom: 6px;
         text-overflow: ellipsis;
@@ -496,7 +488,6 @@
         margin-bottom: 24px;
       }
     }
-
     & {
       text-decoration: none;
       @include shadow;
