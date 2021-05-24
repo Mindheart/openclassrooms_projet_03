@@ -144,10 +144,6 @@
     position: absolute;
     height: 20px;
     opacity: 0;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -ms-background-clip: text;
-    -o-background-clip: text;
     transition: all 1s linear 0s;
     -moz-transition: all 1s linear 0s;
     top: 50%;
@@ -338,10 +334,6 @@
       position: absolute;
       height: 15px;
       opacity: 0;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -ms-background-clip: text;
-      -o-background-clip: text;
       transition: all 1s linear 0s;
       -moz-transition: all 1s linear 0s;
       top: 50%;
