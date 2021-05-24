@@ -1,0 +1,512 @@
+// ======================Loading Spinner==============
+.acceuil {
+  margin: 0;
+  &__progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    height: 5%;
+    margin: 0;
+    &__bar {
+      height: 98%;
+      width: 99%;
+      background-color: $color-tertiaire;
+      transform-origin: left;
+      animation: progress-bar 3s 150ms both;
+      -webkit-animation: progress-bar 2s 150ms both;
+    }
+  }
+
+  @keyframes progress-bar {
+    0% {
+      transform: scaleX(0);
+      opacity: 0.1;
+    }
+    17% {
+      transform: scaleX(0.18);
+    }
+    24% {
+      transform: scaleX(0.4);
+    }
+    46% {
+      transform: scaleX(0.81);
+    }
+    85%,
+    100% {
+      opacity: 1;
+    }
+    100% {
+      transform: scaleX(1);
+      opacity: 0;
+    }
+  }
+}
+.page__acceuil {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  width: 100%;
+  animation: cat 0ms 1800ms both;
+
+  @keyframes cat {
+    0% {
+      transform: translateX(-9999px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @include mobile-M {
+    & {
+      width: 100%;
+    }
+  }
+  @include labtop {
+    display: flex;
+    flex-direction: column;
+
+    .menuNav {
+      order: -1;
+      margin-bottom: 20px;
+    }
+    .description {
+      order: 3;
+    }
+    .group-card {
+      order: 0;
+    }
+    // .headerPage__logo {
+    //   // order: -3;
+    // }
+  }
+}
+
+// ============================Animation coeur acceuil===================
+.card__name__group__i {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  @include mobile {
+    font-size: 0.5em;
+  }
+  @include mobile-M {
+    font-size: 0.6em;
+  }
+
+  @include mobile-L {
+    font-size: 0.8em;
+  }
+  @include mobile-XL {
+    font-size: 1em;
+  }
+
+  // <!-- -----[coeur 1]---------------------------- -->
+
+  .svg-icon1 {
+    height: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    @include tablet {
+      height: 25px;
+    }
+    @include labtop {
+      height: 30px;
+    }
+    @include labtop-L {
+      height: 40px;
+    }
+    @include labtop-4K {
+      height: 60px;
+    }
+  }
+  .svg-icon1 path,
+  .svg-icon1 polygon,
+  .svg-icon1 rect {
+    fill: #2e2e2e;
+  }
+  .svg-icon1 circle {
+    stroke: #2e2e2e;
+    stroke-width: 1;
+  }
+  &:hover .svg-icon1 {
+    display: none;
+  }
+  // -----------[coeur 2]-------------------------------------------
+  .svg-icon2 {
+    position: absolute;
+    height: 20px;
+    opacity: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    transition: all 1s linear 0s;
+    -moz-transition: all 1s linear 0s;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    @include tablet {
+      height: 25px;
+    }
+    @include labtop {
+      height: 30px;
+    }
+    @include labtop-L {
+      height: 40px;
+    }
+    @include labtop-4K {
+      height: 60px;
+    }
+  }
+  .svg-icon1 path,
+  .svg-icon1 polygon,
+  .svg-icon1 rect {
+    fill: #2e2e2e;
+  }
+  .svg-icon1 circle {
+    stroke: #2e2e2e;
+    stroke-width: 1;
+  }
+  &:hover .svg-icon2 {
+    opacity: 1;
+    font-weight: bold;
+  }
+}
+
+// =================Animation apparition ===========
+
+.group__pageMenu__section__entrees {
+  @include groupSection;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 8px;
+  animation: opacity 2s ease-in-out 1;
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+    }
+  }
+}
+.group__pageMenu__section__plats {
+  @include groupSection;
+  margin-top: 8px;
+  animation: opacity 3s ease-in-out 1;
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+    }
+  }
+}
+.group__pageMenu__section__desserts {
+  @include groupSection;
+  margin-top: 8px;
+  animation: opacity 4s ease-in-out 1;
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+      -webkit-transform: translateY(50px);
+      -moz-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+      -o-transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+    }
+  }
+}
+// ================animation coeur PageMenu===========
+.pageMenu__name {
+  &__group__i {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 86%;
+    top: 30%;
+
+    @include mobile {
+      font-size: 0.5em;
+      top: 20%;
+      left: 78%;
+    }
+    @include mobile-M {
+      font-size: 0.6em;
+      top: 16%;
+    }
+
+    @include mobile-L {
+      font-size: 0.8em;
+      top: 20%;
+    }
+    @include mobile-XL {
+      left: 80%;
+      top: 30%;
+      font-size: 1em;
+    }
+    // <!-- -----[coeur 1]---------------------------- -->
+
+    .svg-icon1 {
+      height: 15px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      @include mobile-M {
+        height: 20px;
+      }
+      @include tablet {
+        height: 25px;
+      }
+      @include labtop {
+        height: 30px;
+      }
+      @include labtop-4K {
+        height: 50px;
+        top: 107%;
+      }
+    }
+    .svg-icon1 path,
+    .svg-icon1 polygon,
+    .svg-icon1 rect {
+      fill: #2e2e2e;
+    }
+    .svg-icon1 circle {
+      stroke: #2e2e2e;
+      stroke-width: 1;
+    }
+    &:hover .svg-icon1 {
+      display: none;
+    }
+    // -----------[coeur 2]-------------------------------------------
+    .svg-icon2 {
+      position: absolute;
+      height: 15px;
+      opacity: 0;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -ms-background-clip: text;
+      -o-background-clip: text;
+      transition: all 1s linear 0s;
+      -moz-transition: all 1s linear 0s;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      transition: opacity 1s ease-in-out;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -ms-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      @include mobile-M {
+        height: 20px;
+      }
+      @include tablet {
+        height: 25px;
+      }
+      @include labtop {
+        height: 30px;
+      }
+      @include labtop-4K {
+        height: 50px;
+        top: 107%;
+      }
+    }
+    .svg-icon1 path,
+    .svg-icon1 polygon,
+    .svg-icon1 rect {
+      fill: #2e2e2e;
+    }
+    .svg-icon1 circle {
+      stroke: #2e2e2e;
+      stroke-width: 1;
+    }
+    &:hover .svg-icon2 {
+      opacity: 1;
+      font-weight: bold;
+    }
+  }
+}
+// =========================Animation validation===============
+.pageMenu__section {
+  &__section1,
+  &__section2,
+  &__section3,
+  &__section4 {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 65px;
+    cursor: pointer;
+    background-color: white;
+    @include radius2;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    transition: transform 0.5s;
+    @include labtop-L {
+      height: 90px;
+    }
+    @include labtop-XL {
+      height: 97px;
+    }
+    @include labtop-4K {
+      height: 115px;
+    }
+    &:hover &__validator {
+      width: 100px;
+    }
+    &:hover &__accompaniment {
+      width: 43%;
+    }
+    &:hover &__validator i {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+    }
+
+    &__validator {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-self: flex-start;
+      width: 0;
+      overflow: hidden;
+      background: $color-tertiaire;
+      border-radius: 0 20px 20px 0;
+      // @include bordeRad;
+      transition: width 2s;
+
+      i {
+        font-size: 2em;
+        color: $color-tertiaire;
+        background: white;
+        margin: 50% auto;
+        border-radius: 50%;
+        transform: rotate(0deg);
+        transition: transform 0.8s;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+    }
+    &__accompaniment {
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-evenly;
+      justify-content: center;
+      margin-left: 10px;
+      width: 70%;
+      transition: width 1s ease-in-out;
+
+      -webkit-transition: width 1s ease-in-out;
+      -moz-transition: width 1s ease-in-out;
+      -ms-transition: width 1s ease-in-out;
+      -o-transition: width 1s ease-in-out;
+
+      &__plate {
+        // font-size: 1em;
+        margin: 0;
+        margin-bottom: 6px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &__p {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    &__price {
+      width: 28%;
+      text-align: center;
+      align-self: flex-end;
+      text-decoration: none;
+      margin-bottom: 14px;
+      @include labtop-4K {
+        margin-bottom: 24px;
+      }
+    }
+
+    & {
+      text-decoration: none;
+      @include shadow;
+    }
+    &:hover {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+    }
+  }
+}

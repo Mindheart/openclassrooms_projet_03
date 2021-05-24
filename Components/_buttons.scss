@@ -1,0 +1,114 @@
+// ===========================BUTTON ACCEUIL==============
+
+.descriptor {
+  &__search {
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    height: 41px;
+    color: white;
+    @include radius;
+    background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+    @include shadow;
+    @include center;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+    &:hover {
+      background-color: lighten(#bb63db, 5);
+      transform: scale(1.1);
+      @include shadowDark;
+      text-shadow: 1px 1px 2px white;
+    }
+
+    @include labtop {
+      position: absolute;
+      left: 20%;
+      top: 45%;
+      width: 17.5%;
+      height: 30px;
+      border-left: 1px solid black;
+      background: none;
+      color: black;
+      box-shadow: none;
+      &__p {
+        margin: 0 auto;
+      }
+      &:hover {
+        background: none;
+        box-shadow: none;
+      }
+      border-radius: 0;
+    }
+    @include labtop-L {
+      top: 42%;
+      border-left: 1px solid black;
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      -o-border-radius: 0px;
+    }
+    @include labtop-2K {
+      top: 43%;
+    }
+    @include labtop-4K {
+      top: 41%;
+    }
+  }
+}
+// ===============================BUTTON MENU======================
+.pageMenu__button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+  padding: 30px 0px 90px 0px;
+  @include labtop-L {
+    height: 94px;
+  }
+  @include labtop-4K {
+    height: 110px;
+  }
+
+  & p {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 15px 0px 15px 0px;
+    @include radius;
+    @include gradient;
+    box-shadow: 4px 8px 18px darken(grey, 10);
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 9px 9px 7px darken(grey, 20);
+      background-color: lighten($color-secondary, 20);
+      text-shadow: 1px 1px 2px white;
+    }
+
+    @include tablet {
+      width: 30%;
+    }
+    @include labtop {
+      width: 30%;
+    }
+    @include labtop-L {
+      width: 30%;
+    }
+    @include labtop-4K {
+      width: 30%;
+    }
+  }
+}

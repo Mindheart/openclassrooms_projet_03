@@ -1,0 +1,50 @@
+footer {
+  align-items: center;
+
+  display: flex;
+  background-color: #353535;
+  padding: 0 0 20px 20px;
+  @include mobile-XL {
+    justify-content: center;
+  }
+}
+.footerPage {
+  background-color: #353535;
+  color: white;
+
+  flex-direction: column;
+  &__link {
+    color: white;
+  }
+  & a {
+    text-decoration: none;
+    transition: transform 0.5s;
+    & :hover {
+      transform: scale(1.05);
+      -webkit-transform: scale(1.05);
+      -moz-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      -o-transform: scale(1.05);
+    }
+  }
+  &__utensils {
+    display: flex;
+    align-items: center;
+    & i.fas {
+      padding-right: 8px;
+    }
+  }
+  &__handshake {
+    display: flex;
+    align-items: center;
+    & i.fas {
+      padding-right: 8px;
+    }
+    // &__partenaire {
+    //   // margin-left: 20px;
+    // }
+  }
+  &__logo {
+    font-family: "Shrikhand";
+  }
+}

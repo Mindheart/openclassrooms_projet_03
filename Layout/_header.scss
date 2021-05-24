@@ -1,0 +1,363 @@
+// ===========================header Acceuil===============
+
+.headerPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 44px;
+  // background-color: #f6f6f6;
+  @include labtop {
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    order: -1;
+    @include labtop {
+      // position: absolute;
+      // top: -20px;
+      // width: 200px;
+      // left: -15px;
+    }
+
+    &__1 {
+      width: 70%;
+      @include labtop {
+        // text-align: center;
+      }
+    }
+  }
+}
+
+.menuNav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  background-color: white;
+  @include labtop {
+    padding-top: 40px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    &__link__circle {
+      display: none;
+    }
+    i.fas.fa-bars,
+    i.fas.fa-mobile-alt,
+    i.fas.fa-store {
+      display: none;
+    }
+
+    // order: -1;
+  }
+
+  &__name {
+    background-color: white;
+    width: 100%;
+    height: 34px;
+    font-size: 1.4em;
+    @include labtop {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    width: 100%;
+    height: 75px;
+    // font-size: 1.4em;
+    justify-content: space-evenly;
+    cursor: pointer;
+    @include radius;
+    margin-bottom: 20px;
+    &--choose {
+      width: 100%;
+      transition: transform 0.5s;
+      @include shadow;
+      &:hover {
+        @include shadowDark;
+        transform: scale(1.05);
+        // align-items: center;
+        // height: 75px;
+        background: #f5edff;
+        // @include radius;
+        @include labtop {
+          background: none;
+          box-shadow: none;
+        }
+      }
+      &:hover i {
+        color: #9356dc;
+      }
+    }
+
+    & a {
+      // width: 100%;
+      text-decoration: none;
+      align-items: center;
+      text-align: center;
+      & {
+        color: black;
+        position: relative;
+        left: 4%;
+        transform: translateX(-6%);
+        -webkit-transform: translateX(-6%);
+        -moz-transform: translateX(-6%);
+        -ms-transform: translateX(-6%);
+        -o-transform: translateX(-6%);
+      }
+    }
+    &__circle {
+      position: absolute;
+      left: 5%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      background-color: #9356dc;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      &__p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        margin: 0;
+      }
+    }
+    @include labtop {
+      width: 20%;
+      border-left: 1px solid black;
+      border-radius: 0;
+      height: 30px;
+      background-color: white;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      box-shadow: none;
+      & :hover {
+        background-color: white;
+      }
+    }
+  }
+
+  & i {
+    cursor: pointer;
+    position: absolute;
+    left: 20%;
+    transform: translate(-50%);
+    width: 5%;
+    z-index: 1;
+    &:hover {
+      color: #9356dc;
+    }
+  }
+}
+.descriptor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #f6f6f6;
+
+  padding-bottom: 15%;
+  @include labtop {
+    background-color: #eaeaea;
+    flex-direction: row;
+    padding: 0;
+  }
+  &__location {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 22px;
+    background-color: #eaeaea;
+    @include center;
+    padding-bottom: 20px;
+    @include labtop {
+      border-right: 1px solid;
+    }
+    &__p {
+      position: absolute;
+      border: none;
+      text-align: center;
+      width: 100px;
+      background-color: #eaeaea;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      padding: 0;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+      @include mobile-XL {
+        width: 120px;
+      }
+      @include labtop {
+        width: 120px;
+      }
+      @include labtop-L {
+        width: 175px;
+      }
+      @include labtop-XL {
+        width: 200px;
+      }
+    }
+    & i {
+      position: absolute;
+      left: 23%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      // @include mobile-M {
+      //   left: 33%;
+      // }
+      // @include mobile {
+      //   left: 17%;
+      // }
+      @include mobile-L {
+        left: 30%;
+      }
+      // @include mobile-XL {
+      //   left: 37%;
+      // }
+
+      @include tablet {
+        left: 40%;
+      }
+      @include labtop {
+        left: 36%;
+      }
+      // @include labtop-4K {
+      //   left: 46%;
+      // }
+    }
+  }
+  &__reserve {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &__titre {
+      font-weight: 900;
+      width: 80%;
+      // font-size: 1.2em;
+      @include center;
+    }
+    @include labtop {
+      // display: none;
+      // display: block;
+      // position: absolute;
+      // width: 100%;
+    }
+  }
+  &__discovering {
+    display: flex;
+    flex-direction: column;
+    width: 76%;
+    overflow-wrap: break-word;
+    @include center;
+    @include labtop {
+      ////display: none;
+      //position: absolute;
+      position: absolute;
+      left: 50%;
+      top: 300px;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
+  }
+}
+// ===========================header page Menu============
+.headerPage__menu {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  @include mobile-L {
+    height: 70px;
+  }
+  @include mobile-XL {
+    height: 90px;
+  }
+  @include tablet {
+    height: 102px;
+  }
+  @include labtop-L {
+    height: 170px;
+  }
+  @include labtop-XL {
+    height: 190px;
+  }
+  @include labtop-2K {
+    height: 225px;
+  }
+  @include labtop-4K {
+    height: 260px;
+  }
+  &__div {
+    width: 80%;
+    position: relative;
+    height: 100%;
+
+    i {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: -4%;
+      transform: translate(-50%, -50%);
+      font-size: 0.8em;
+      color: black;
+      @include mobile-M {
+        font-size: 1em;
+      }
+      @include mobile-L {
+        font-size: 1em;
+      }
+      @include mobile-XL {
+        font-size: 1.4em;
+      }
+      @include tablet {
+        font-size: 1.6em;
+      }
+      @include labtop-L {
+        font-size: 2em;
+      }
+      @include labtop-XL {
+        font-size: 2.5em;
+      }
+      @include labtop-2K {
+        font-size: 2.6em;
+      }
+      @include labtop-4K {
+        font-size: 3em;
+      }
+    }
+    &__logo {
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include tablet {
+      }
+    }
+  }
+}

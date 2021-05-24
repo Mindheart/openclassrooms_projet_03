@@ -4,6 +4,6 @@ $color-tertiaire: #99e2d0;
 $color-quaternaire: #eaeaea;
 $color-sextenaire: #353535;
 $color-octonary: #f5edff;
-// @mixin gradient {
-//   background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
-// }
+@mixin gradient {
+  background: linear-gradient(to bottom, #ffa0f2, #a51ad8);
+}
